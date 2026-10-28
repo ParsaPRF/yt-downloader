@@ -1,0 +1,16 @@
+[Unit]
+Description=YouTube Downloader (yt-dlp)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/yt-downloader
+ExecStart=/opt/yt-downloader/download.sh --links /opt/yt-downloader/videos.txt
+User=ytuser
+Group=ytuser
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

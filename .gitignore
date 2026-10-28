@@ -1,0 +1,14 @@
+# venv / caches
+.venv/
+__pycache__/
+*.pyc
+
+# downloaded files, logs and yt-dlp state
+downloads/*
+logs/*
+archive.txt
+cookies.txt
+
+# keep the folder placeholders
+!downloads/.gitkeep
+!logs/.gitkeep
